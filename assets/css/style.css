@@ -39,7 +39,237 @@
 .icon-heart:before {
     content: "\e904";
 }
-.icon-circle-down:before {
+.icon-circle-down:after {
     content: "\e905";
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    color: #243238;
+    background: #ededed;
+}
+
+.mobilepanel {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mobilepanel .icon-menu {
+    font-size: 30px;
+    position: fixed;
+    top: 13px;
+    left: 17px;
+    color: #000;
+    text-decoration: none;
+}
+
+.mobilepanel span {
+    font-size: 24px;
+    line-height: 48px;
+    position: fixed;
+    top: 4px;
+    left: 56px;
+}
+
+.header-content {
+    width: 100%;
+    padding: 96px 0 40px;
+    text-align: center;
+}
+
+.header-content .logo {
+    display: inline-block;
+}
+
+.header-content .logo a {
+    float: left;
+}
+
+.header-content .logo .icon-menu {
+    margin: 25px 0 0 30px;
+    font-size: 20px;
+    float: right;
+    text-decoration: none;
+    color: #7d7d7d;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.header-content .logo .icon-menu:hover, .mobile8 .icon-search:hover {
+    color: #547abb;
+}
+
+.header-content .logo img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+nav {
+    display: none;
+}
+
+.mobile8 {
+    padding-top: 20px;
+}
+
+.mobile8 .icon-search {
+    cursor: pointer;
+}
+
+.mobile8 .icon-search, .icon-cart {
+    display: block;
+    font-size: 30px;
+    color: #0e0e0e;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+.mobile8 .icon-cart {
+    padding-top: 30px;
+}
+
+
+@media only screen and (max-width: 359px) {
+    .mobilepanel span {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobilepanel {
+        display: none;
+    }
+
+    .header-content {
+        padding-top: 40px;
+    }
+
+    .header-content .logo {
+        float: left;
+        padding: 10px 0 0 12px;
+    }
+
+    .header-content .logo img {
+        width: 150px;
+    }
+
+    .header-content .logo .icon-menu {
+        margin: 15px 0 0 5px;
+    }
+
+    .header-content .logo .icon-menu {
+        display: inline-block;
+    }
+
+    .grid2 {
+        display: inline-block;
+    }
+
+    nav {
+        display: inline-block;
+        padding-top: 15px;
+        float: left;
+        margin-left: 15px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    nav .selected a {
+        color: #547abb;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #0b0b0b;
+        transition: 0.4s all;
+    }
+
+     nav li:hover> a {
+        color: #547abb;
+    }
+    
+    .mobile8 {
+        float: left;
+        margin-left: 10px;
+        padding-top: 15px;
+    }
+    
+    .mobile8 .icon-search {
+        float: right;
+        margin-left: 10px;
+    }
+
+    .mobile8 .icon-cart {
+        float: left;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .container {
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+
+    .header-content .logo {
+        width: 33.3333%;
+        padding: 0 0 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .header-content .logo img {
+        width: 100%;
+    }
+    .header-content .logo .icon-menu {
+        float: left;
+        margin: 25px 0 0 35px;
+    }
+
+    .grid2 {
+        width: 66.6666%;
+        padding-left: 50px;
+        box-sizing: border-box;
+    }
+    
+    .grid2 nav {
+        margin-left: 0;
+    }
+    
+    .grid2 nav li {
+        padding: 0;
+    }
+
+    .header-content nav li a {
+        padding: 0 25px;
+    } 
+
+    .header-content .mobile8 {
+        padding-left: 35px;
+    }
+
+    .header-content .mobile8 .icon-search {
+        margin-left: 40px;
+    }
+}
